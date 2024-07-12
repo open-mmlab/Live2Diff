@@ -48,10 +48,10 @@ The speed evaluation is conducted on **Ubuntu 20.04.6 LTS** and **Pytorch 2.2.2*
         </tr>
         <tr align="center">
             <td>
-                <video controls autoplay src="https://github-production-user-asset-6210df.s3.amazonaws.com/28132635/346031564-a56bea4f-9aed-497c-9cb9-868db72599fb.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240705%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240705T064755Z&X-Amz-Expires=300&X-Amz-Signature=3d0890fa6af8b86d10c69de9c31b8f97ff1d35cdbcdd4b1a9e465e49dd8d8194&X-Amz-SignedHeaders=host&actor_id=28132635&key_id=0&repo_id=819189683" width="100%">
+                <video controls autoplay src="https://github.com/user-attachments/assets/c39e4b1f-e336-479a-af72-d07b1e3c6e30" width="100%">
             </td>
             <td>
-                <video controls autoplay src="https://github-production-user-asset-6210df.s3.amazonaws.com/28132635/346055688-00f873dc-7348-458d-a814-7a7e8d158db5.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240705%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240705T081427Z&X-Amz-Expires=300&X-Amz-Signature=609199998d9f10a814d7a65e6dbff980a84bba77f25f43f99a1607bd0cee2f01&X-Amz-SignedHeaders=host&actor_id=28132635&key_id=0&repo_id=819189683" width="80%">
+                <video controls autoplay src="https://github.com/user-attachments/assets/42727f46-b3cf-48ea-971c-9f653bf5a264" width="80%">
             </td>
         </tr>
         </tbody>
