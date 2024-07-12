@@ -7,7 +7,7 @@
 **Authors:** [Zhening Xing](https://github.com/LeoXing1996), [Gereon Fox](https://people.mpi-inf.mpg.de/~gfox/), [Yanhong Zeng](https://zengyh1900.github.io/), [Xingang Pan](https://xingangpan.github.io/), [Mohamed Elgharib](https://people.mpi-inf.mpg.de/~elgharib/), [Christian Theobalt](https://people.mpi-inf.mpg.de/~theobalt/), [Kai Chen †](https://chenkai.site/) (†: corresponding author)
 
 
-[![arXiv](https://img.shields.io/badge/arXiv-xxxx.xxxxx-b31b1b.svg)](TODO)
+[![arXiv](https://img.shields.io/badge/arXiv-2407.08701-b31b1b.svg)](https://arxiv.org/abs/2407.08701)
 [![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://live2diff.github.io/)
 
 ## Code will be release in **one week**, stay tuned!
@@ -62,3 +62,16 @@ The speed evaluation is conducted on **Ubuntu 20.04.6 LTS** and **Pytorch 2.2.2*
 ## Acknowledgements
 
 The video and image demos in this GitHub repository were generated using [LCM-LoRA](https://huggingface.co/latent-consistency/lcm-lora-sdv1-5). Stream batch in [StreamDiffusion](https://github.com/cumulo-autumn/StreamDiffusion) is used for model acceleration. The design of Video Diffusion Model is adopted from [AnimateDiff](https://github.com/guoyww/AnimateDiff). We use a third-party implementation of [MiDaS](https://github.com/lewiji/MiDaS) implementation which support onnx export. Our online demo is modified from [Real-Time-Latent-Consistency-Model](https://github.com/radames/Real-Time-Latent-Consistency-Model/).
+
+## BibTex
+
+If you find it helpful, please consider citing our work:
+
+```bibtex
+@article{xing2024live2diff,
+  title={Live2Diff: Live Stream Translation via Uni-directional Attention in Video Diffusion Models},
+  author={Zhening Xing and Gereon Fox and Yanhong Zeng and Xingang Pan and Mohamed Elgharib and Christian Theobalt and Kai Chen},
+  booktitle={arXiv preprint arxiv:2407.08701},
+  year={2024}
+}
+```
