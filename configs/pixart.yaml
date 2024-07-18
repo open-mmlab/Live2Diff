@@ -1,0 +1,12 @@
+# good, 0.4 & 0.3
+
+base: "./configs/base_config.yaml"
+
+prompt_template: "(masterpiece), best quality, {}"
+
+third_party_dict:
+  dreambooth: "./models/Model/aziibpixelmix_v10.safetensors"
+  clip_skip: 2
+
+num_inference_steps: 4
+strength: 0.6

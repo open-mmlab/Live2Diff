@@ -1,0 +1,48 @@
+pretrained_model_path: "../models/Model/stable-diffusion-v1-5"
+
+motion_module_path: '../models/live2diff.ckpt'
+depth_model_path: '../models/dpt_hybrid_384.pt'
+
+unet_additional_kwargs:
+  cond_mapping: true
+  use_inflated_groupnorm:          true
+  use_motion_module              : true
+  motion_module_resolutions      : [ 1,2,4,8 ]
+  unet_use_cross_frame_attention : false
+  unet_use_temporal_attention    : false
+
+  motion_module_type: Streaming
+  motion_module_kwargs:
+    num_attention_heads                : 8
+    num_transformer_block              : 1
+    attention_block_types              : [ "Temporal_Self", "Temporal_Self" ]
+    temporal_position_encoding         : true
+    temporal_position_encoding_max_len : 24
+    temporal_attention_dim_div         : 1
+    zero_initialize                    : true
+
+    attention_class_name               : 'stream'
+
+    attention_kwargs:
+      window_size: 16
+      sink_size: 8
+
+noise_scheduler_kwargs:
+  num_train_timesteps: 1000
+  beta_start:    0.00085
+  beta_end:      0.012
+  beta_schedule: "linear"
+  steps_offset:  1
+  clip_sample:   False
+
+third_party_dict:
+  dreambooth: "../models/Model/aziibpixelmix_v10.safetensors"
+  lora_list:
+    - lora: '../models/LoRA/kFeltedReV.safetensors'
+      lora_alpha: 1
+  clip_skip: 2
+
+num_inference_steps: 50
+t_index_list: [35, 40, 45]
+
+prompt: "masterpiece, best quality, 1gril"

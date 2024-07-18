@@ -1,0 +1,15 @@
+# good, s04!!!!
+
+base: "./configs/base_config.yaml"
+
+prompt_template: "(masterpiece),best quality, a origami paper of {}"
+
+third_party_dict:
+  dreambooth: "./models/Model/helloartdoor_V122p.safetensors"
+  lora_list:
+    - lora: "./models/LoRA/ral-origami-sd15.safetensors"
+      lora_alpha: 1
+  clip_skip: 2
+
+num_inference_steps: 50
+t_index_list: [30, 36, 42]

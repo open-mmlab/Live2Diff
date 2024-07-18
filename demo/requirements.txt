@@ -1,0 +1,4 @@
+compel==2.0.2
+fastapi==0.104.1
+markdown2
+uvicorn[standard]==0.24.0.post1

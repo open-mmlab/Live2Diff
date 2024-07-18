@@ -1,0 +1,17 @@
+# good, s06-4 and s05-4
+base: "./configs/base_config.yaml"
+
+prompt_template: "masterpiece, best quality, felted, {},"
+
+third_party_dict:
+  dreambooth: "./models/Model/revAnimated_v2RebirthVAE.safetensors"
+  lora_list:
+    - lora: './models/LoRA/kFeltedReV.safetensors'
+      lora_alpha: 1
+  clip_skip: 2
+
+num_inference_steps: 50
+t_index_list: [25, 34, 43]
+# or
+# num_inference_steps: 50
+# t_index_list: [20, 27, 34, 41]

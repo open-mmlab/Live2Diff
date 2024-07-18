@@ -1,0 +1,10 @@
+base: "./configs/base_config.yaml"
+
+prompt: "masterpiece, best quality, intricate, print, pattern, {}"
+
+third_party_dict:
+  dreambooth: "./models/Model/toonyou_beta6.safetensors"
+  clip_skip: 2
+
+num_inference_steps: 50
+t_index_list: [25, 31, 37, 43]

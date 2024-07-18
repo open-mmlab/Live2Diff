@@ -1,0 +1,13 @@
+base: "./configs/base_config.yaml"
+
+prompt_template: 'shukezouma, negative space, shuimobysim, official art,extremely detailed CG,unity 8k wallpaper,chinese ink painting, {}'
+
+third_party_dict:
+  lora_list:
+    - lora: "./models/LoRA/MoXinV1.safetensors"
+      lora_alpha: 0.7
+  dreambooth: "./models/Model/3Guofeng3_v34.safetensors"
+  clip_skip: 2
+
+num_inference_steps: 50
+t_index_list: [30, 36, 42]
