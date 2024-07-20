@@ -14,6 +14,9 @@
 </a>
 [![HuggingFace Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/Leoxing/Live2Diff)
 
+## Introduction Video
+
+[![Youtube Introduction Video](https://github.com/user-attachments/assets/548e200e-90c3-4d51-a1d2-3f5ba78cb151)](https://youtu.be/4w2cLRW3RX0)
 
 ## Release
 
