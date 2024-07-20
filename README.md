@@ -9,6 +9,11 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-2407.08701-b31b1b.svg)](https://arxiv.org/abs/2407.08701)
 [![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://live2diff.github.io/)
+<a target="_blank" href="https://huggingface.co/spaces/Leoxing/Live2Diff">
+  <img src="https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-sm.svg" alt="Open in HugginFace"/>
+</a>
+[![HuggingFace Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/Leoxing/Live2Diff)
+
 
 ## Release
 
