@@ -13,6 +13,7 @@
   <img src="https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-sm.svg" alt="Open in HugginFace"/>
 </a>
 [![HuggingFace Model](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/Leoxing/Live2Diff)
+[![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Oo0KpOboBAO10ZG_nIB55zbDHpt-Pu68?usp=sharing)
 
 ## Introduction Video
 
@@ -21,10 +22,11 @@
 ## Release
 
 * [2024/07/18] We release [HuggingFace space](https://huggingface.co/spaces/Leoxing/Live2Diff), code, and [checkpoints](https://huggingface.co/Leoxing/Live2Diff).
+* [2024/07/22] We release [Colab Demo](https://colab.research.google.com/drive/1Oo0KpOboBAO10ZG_nIB55zbDHpt-Pu68?usp=sharing)
 
 ## TODO List
 
-- [ ] Support Colab
+- [x] Support Colab
 
 ## Key Features
 
@@ -62,7 +64,7 @@ git submodule update --init --recursive
 
 ### Step1: Make Environment
 
-Create virtual envrionment via conda:
+Create virtual environment via conda:
 
 ```bash
 conda create -n live2diff python=3.10
