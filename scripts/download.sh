@@ -42,7 +42,7 @@ download_zaum () {
 download_felted () {
     echo "Download checkpoints for Felted..."
     wget https://civitai.com/api/download/models/428862\?token\=${TOKEN} -P ./models/Model --content-disposition --no-check-certificate
-    wget https://civitai.com/api/download/models/86725\?token\=${TOKEN} -P ./models/LoRA --content-disposition --no-check-certificate
+    wget https://civitai.com/api/download/models/86739\?token\=${TOKEN} -P ./models/LoRA --content-disposition --no-check-certificate
 }
 
 if [ -z "$1" ]; then
