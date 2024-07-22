@@ -265,8 +265,11 @@ class AnimationDepthPipeline(DiffusionPipeline, TextualInversionLoaderMixin, Lor
         noise_scheduler = DDIMScheduler(**OmegaConf.to_container(noise_scheduler_kwargs))
 
         vae = AutoencoderKL.from_pretrained(pretrained_model_path, subfolder="vae")
+        vae = vae.to(device="cuda", dtype=torch.bfloat16)
         tokenizer = CLIPTokenizer.from_pretrained(pretrained_model_path, subfolder="tokenizer")
         text_encoder = CLIPTextModel.from_pretrained(pretrained_model_path, subfolder="text_encoder")
+        text_encoder = text_encoder.to(device="cuda", dtype=torch.float16)
+
         unet = UNet3DConditionStreamingModel.from_pretrained_2d(
             pretrained_model_path,
             subfolder="unet",
@@ -275,7 +278,7 @@ class AnimationDepthPipeline(DiffusionPipeline, TextualInversionLoaderMixin, Lor
 
         motion_module_path = cfg.motion_module_path
         # load motion module to unet
-        mm_checkpoint = torch.load(motion_module_path, map_location="cpu")
+        mm_checkpoint = torch.load(motion_module_path, map_location="cuda")
         if "global_step" in mm_checkpoint:
             print(f"global_step: {mm_checkpoint['global_step']}")
         state_dict = mm_checkpoint["state_dict"] if "state_dict" in mm_checkpoint else mm_checkpoint
@@ -286,9 +289,7 @@ class AnimationDepthPipeline(DiffusionPipeline, TextualInversionLoaderMixin, Lor
         assert len(u) == 0, f"Find unexpected keys ({len(u)}): {u}"
         print(f"missing keys: {len(m)}, unexpected keys: {len(u)}")
 
-        unet = unet.to(device="cuda", dtype=torch.float16)
-        vae = vae.to(device="cuda", dtype=torch.bfloat16)
-        text_encoder = text_encoder.to(device="cuda", dtype=torch.float16)
+        unet = unet.to(dtype=torch.float16)
         depth_model = MidasDetector(cfg.depth_model_path).to(device="cuda", dtype=torch.float16)
 
         pipeline = cls(

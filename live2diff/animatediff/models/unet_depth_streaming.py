@@ -646,13 +646,16 @@ class UNet3DConditionStreamingModel(ModelMixin, ConfigMixin, UNet2DConditionLoad
         ]
         config["up_block_types"] = ["UpBlock3D", "CrossAttnUpBlock3D", "CrossAttnUpBlock3D", "CrossAttnUpBlock3D"]
 
-        from diffusers.utils import WEIGHTS_NAME
+        from diffusers.utils import SAFETENSORS_WEIGHTS_NAME
+        from safetensors import safe_open
 
-        model = cls.from_config(config, **unet_additional_kwargs)
-        model_file = os.path.join(pretrained_model_path, WEIGHTS_NAME)
+        model = cls.from_config(config, **unet_additional_kwargs).to(device="cuda")
+        model_file = os.path.join(pretrained_model_path, SAFETENSORS_WEIGHTS_NAME)
         if not os.path.isfile(model_file):
             raise RuntimeError(f"{model_file} does not exist")
-        state_dict = torch.load(model_file, map_location="cpu")
+
+        with safe_open(model_file, framework="pt", device="cuda") as f:
+            state_dict = {k: f.get_tensor(k) for k in f.keys()}
 
         m, u = model.load_state_dict(state_dict, strict=False)
         print(f"### missing keys: {len(m)}; \n### unexpected keys: {len(u)};")
